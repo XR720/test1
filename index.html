@@ -28,6 +28,9 @@
         if(evt.data.payload=="initialized") {
             //Tour initialized -> put your code here
             document.getElementById(id_iframe).style.display = "block";
+            
+            // 自动加载
+            iframe_svt.postMessage({command: "load", params: {autoStart: true}}, "*");
         }
     }, false);
 </script>
